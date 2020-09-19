@@ -8,6 +8,7 @@ body {
   font-family: 'Open Sans',sans-serif;
   font-size: rem(14px);
   line-height: 1.4;
+  letter-spacing: .5px;
 }
 
 input[type=number].num::-webkit-inner-spin-button,
@@ -18,4 +19,12 @@ input[type=number].num::-webkit-outer-spin-button {
   &:focus {
     box-shadow: none;
   }
+}
+
+.main-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.brand-logo {
+
 }
