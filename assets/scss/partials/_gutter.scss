@@ -1,0 +1,147 @@
+$m: "margin";
+$p: "padding";
+$t: "top";
+$r: "right";
+$b: "bottom";
+$l: "left";
+$step: 5;  // it provides interval gap
+$step4: 4;  // it provides interval gap
+
+// Global margin adjustment classes for 0-60. interval of 5px
+@for $i from 0 through 60 / $step {
+  .m#{$i*$step} {
+    #{$m}: #{$i*$step}px;
+  }
+
+  .mt#{$i*$step} {
+    #{$m}-#{$t}: #{$i*$step}px;
+  }
+
+  .mr#{$i*$step} {
+    #{$m}-#{$r}: #{$i*$step}px;
+  }
+
+  .mb#{$i*$step} {
+    #{$m}-#{$b}: #{$i*$step}px;
+  }
+
+  .ml#{$i*$step} {
+    #{$m}-#{$l}: #{$i*$step}px;
+  }
+
+  .mtb#{$i*$step} {
+    #{$m}-#{$t}: #{$i*$step}px;
+    #{$m}-#{$b}: #{$i*$step}px;
+  }
+
+  .mrl#{$i*$step} {
+    #{$m}-#{$r}: #{$i*$step}px;
+    #{$m}-#{$l}: #{$i*$step}px;
+  }
+}
+// END Global margin adjustment classes for 0-60.
+
+// Global padding adjustment classes for 0-60.
+@for $i from 0 through 60 / $step {
+  .p#{$i*$step} {
+    #{$p}: #{$i*$step}px;
+  }
+  .pt#{$i*$step} {
+    #{$p}-#{$t}: #{$i*$step}px;
+  }
+
+  .pr#{$i*$step} {
+    #{$p}-#{$r}: #{$i*$step}px;
+  }
+
+  .pb#{$i*$step} {
+    #{$p}-#{$b}: #{$i*$step}px;
+  }
+
+  .pl#{$i*$step} {
+    #{$p}-#{$l}: #{$i*$step}px;
+  }
+
+  .ptb#{$i*$step} {
+    #{$p}-#{$t}: #{$i*$step}px;
+    #{$p}-#{$b}: #{$i*$step}px;
+  }
+
+  .prl#{$i*$step} {
+    #{$p}-#{$l}: #{$i*$step}px;
+    #{$p}-#{$r}: #{$i*$step}px;
+  }
+}
+// END Global padding adjustment classes for 0-60.
+
+
+
+// As our new design follow spacing and gutter space in multiples of 4.
+// We are creating global margin and padding in multiples of 4.
+
+// Global margin adjustment classes for 0-64. interval of 4px
+@for $i from 0 through 64 / $step4 {
+  .m#{$i*$step4} {
+    #{$m}: #{$i*$step4}px;
+  }
+
+  .mt#{$i*$step4} {
+    #{$m}-#{$t}: #{$i*$step4}px;
+  }
+
+  .mr#{$i*$step4} {
+    #{$m}-#{$r}: #{$i*$step4}px;
+  }
+
+  .mb#{$i*$step4} {
+    #{$m}-#{$b}: #{$i*$step4}px;
+  }
+
+  .ml#{$i*$step4} {
+    #{$m}-#{$l}: #{$i*$step4}px;
+  }
+
+  .mtb#{$i*$step4} {
+    #{$m}-#{$t}: #{$i*$step4}px;
+    #{$m}-#{$b}: #{$i*$step4}px;
+  }
+
+  .mrl#{$i*$step4} {
+    #{$m}-#{$r}: #{$i*$step4}px;
+    #{$m}-#{$l}: #{$i*$step4}px;
+  }
+}
+// END Global margin adjustment classes for 0-64.
+
+// Global padding adjustment classes for 0-64.
+@for $i from 0 through 64 / $step4 {
+  .p#{$i*$step4} {
+    #{$p}: #{$i*$step4}px;
+  }
+  .pt#{$i*$step4} {
+    #{$p}-#{$t}: #{$i*$step4}px;
+  }
+
+  .pr#{$i*$step4} {
+    #{$p}-#{$r}: #{$i*$step4}px;
+  }
+
+  .pb#{$i*$step4} {
+    #{$p}-#{$b}: #{$i*$step4}px;
+  }
+
+  .pl#{$i*$step4} {
+    #{$p}-#{$l}: #{$i*$step4}px;
+  }
+
+  .ptb#{$i*$step4} {
+    #{$p}-#{$t}: #{$i*$step4}px;
+    #{$p}-#{$b}: #{$i*$step4}px;
+  }
+
+  .prl#{$i*$step4} {
+    #{$p}-#{$l}: #{$i*$step4}px;
+    #{$p}-#{$r}: #{$i*$step4}px;
+  }
+}
+// END Global padding adjustment classes for 0-64.

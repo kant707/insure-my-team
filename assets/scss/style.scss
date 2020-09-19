@@ -1,0 +1,21 @@
+@import "partials/variables";
+@import "partials/common";
+@import "partials/gutter";
+@import "partials/rem";
+//@import "pages/optional-services";
+
+body {
+  font-family: 'Open Sans',sans-serif;
+  font-size: rem(14px);
+  line-height: 1.4;
+}
+
+input[type=number].num::-webkit-inner-spin-button,
+input[type=number].num::-webkit-outer-spin-button {
+  opacity: 1;
+}
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
