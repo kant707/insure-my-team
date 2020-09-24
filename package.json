@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shashikant",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "compass": "^0.1.1",
+    "gem": "^2.4.3",
+    "get": "^1.4.0",
+    "http-server": "^0.12.3",
+    "sass": "^1.26.11"
+  }
 }
