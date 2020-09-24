@@ -1,0 +1,109 @@
+@import "variables";
+
+.btn {
+  background: $primary-purple;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16);
+  min-height: 60px;
+  color: $white;
+  font-size: 16px;
+  font-weight: bold;
+  &:hover {
+    color: $white;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.custom-form-group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+
+.custom-form-field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid $shade-2;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary;
+  padding: 7px 0 7px 2px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.custom-form-field::placeholder {
+  color: transparent;
+}
+
+.custom-form-label,
+.custom-form-field:placeholder-shown ~ .custom-form-label {
+  font-size: 16px;
+  cursor: text;
+  top: 20px;
+  left: 0;
+}
+.custom-form-label,
+.custom-form-field:focus ~ .custom-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 14px;
+  color: $shade-2;
+  font-weight: 600;
+}
+
+.custom-form-field:focus ~ .custom-form-label {
+  color: $secondary-purple;
+}
+
+.custom-form-field:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid $secondary-purple;
+}
+
+.custom-form-group {
+  &.textarea-group {
+    .textarea-input {
+      border: 1px solid #d2d2d2;
+      border-radius: 2px;
+
+      &:focus {
+        border-bottom: 2px solid #009788;
+
+        ~ .custom-form-label {
+          color: #009788;
+        }
+      }
+    }
+
+    .custom-form-field:focus ~ .custom-form-label {
+      background-color: #fff;
+      padding-right: 2px;
+      padding-left: 2px;
+      position: absolute;
+      top: 7px;
+    }
+  }
+}
+
+
+// HTML Markup reference
+/*
+<div class="custom-form-group">
+<input type="email" id="email" class="custom-form-field" placeholder="Your Email">
+<label for="email" class="custom-form-label">Your Email</label>
+</div>
+
+<div class="custom-form-group textarea-group">
+<textarea id="message" class="custom-form-field textarea-input" placeholder="Your Message" rows="6"></textarea>
+<label for="message" class="custom-form-label">Your Message</label>
+</div>
+*/

@@ -41,7 +41,7 @@ html {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
   .container {
     max-width: 1440px;
   }
@@ -73,7 +73,7 @@ html {
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1200px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1440px;
   }

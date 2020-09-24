@@ -2,11 +2,14 @@
 @import "partials/common";
 @import "partials/gutter";
 @import "partials/rem";
+@import "partials/form-elements";
 //@import "pages/optional-services";
 
 body {
+  color: $primary;
   font-family: 'Open Sans',sans-serif;
   font-size: rem(14px);
+  font-weight: 600;
   line-height: 1.4;
   letter-spacing: .5px;
 }
@@ -28,10 +31,14 @@ input[type=number].num::-webkit-outer-spin-button {
   &::before {
     content: '';
     background: #000 url('/assets/images/graphic/onboarding-graphic.svg') no-repeat center top/cover;
-    position: absolute; 
+    position: absolute;
     right: 0;
     height: 100%;
     width: 50%;
+
+    @media (max-width: 991px) {
+      content: none;
+    }
   }
 }
 
@@ -42,76 +49,80 @@ input[type=number].num::-webkit-outer-spin-button {
 .brand-logo {
 
 }
+.onboarding-header {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
 
 
-
-// anuj css
-
-.side-a{
-  p{
-    font-size: 16px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.75;
-    letter-spacing: 0.5px;
-    color: #8172f1;
-  }
-
-  .form-group {
-    position: relative;
-    padding: 15px 0 0;
-    margin-top: 10px;
-  }
-  
-  .form-field {
-    font-family: inherit;
-    width: 100%;
-    border: 0;
-    border-bottom: 1px solid #d2d2d2;
-    outline: 0;
-    font-size: 16px;
-    color: #000;
-    padding: 7px 0 7px 4px;
-    background: transparent;
-    transition: border-color 0.2s;
-  }
-  
-  .form-field::placeholder {
-    color: transparent;
-  }
-  
-  .form-field:placeholder-shown ~ .form-label {
-    font-size: 16px;
-    cursor: text;
-    top:20px;
-    left: 4px;
-  }
-  
-  label,
-  .form-field:focus ~ .form-label {
-    position: absolute;
-    top: 0;
-    left: 4px;
-    display: block;
-    transition: 0.2s;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #5d5a84;
-  }
-  
-  .form-field:focus ~ .form-label {
-    color: $b;
-  }
-  
-  .form-field:focus {
-    padding-bottom: 6px;
-    border-bottom: 2px solid #4f3dd1;
-  }
-   .sendotp{
-
-   }
-
-  }
-
+//
+//// anuj css
+//
+//.side-a{
+//  p{
+//    font-size: 16px;
+//    font-weight: 600;
+//    font-stretch: normal;
+//    font-style: normal;
+//    line-height: 1.75;
+//    letter-spacing: 0.5px;
+//    color: #8172f1;
+//  }
+//
+//  .form-group {
+//    position: relative;
+//    padding: 15px 0 0;
+//    margin-top: 10px;
+//  }
+//
+//  .form-field {
+//    font-family: inherit;
+//    width: 100%;
+//    border: 0;
+//    border-bottom: 1px solid #d2d2d2;
+//    outline: 0;
+//    font-size: 16px;
+//    color: #000;
+//    padding: 7px 0 7px 4px;
+//    background: transparent;
+//    transition: border-color 0.2s;
+//  }
+//
+//  .form-field::placeholder {
+//    color: transparent;
+//  }
+//
+//  .form-field:placeholder-shown ~ .form-label {
+//    font-size: 16px;
+//    cursor: text;
+//    top:20px;
+//    left: 4px;
+//  }
+//
+//  label,
+//  .form-field:focus ~ .form-label {
+//    position: absolute;
+//    top: 0;
+//    left: 4px;
+//    display: block;
+//    transition: 0.2s;
+//    font-size: 16px;
+//    font-weight: 600;
+//    letter-spacing: 0.5px;
+//    color: #5d5a84;
+//  }
+//
+//  .form-field:focus ~ .form-label {
+//    color: $b;
+//  }
+//
+//  .form-field:focus {
+//    padding-bottom: 6px;
+//    border-bottom: 2px solid #4f3dd1;
+//  }
+//   .sendotp{
+//
+//   }
+//
+//  }
+//

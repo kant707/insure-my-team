@@ -1,3 +1,4 @@
+@import "variables";
 @import "rem";
 // Bootstrap overrides
 .custom-control-label::before {
@@ -6,17 +7,19 @@
 .custom-switch .custom-control-label::after {
   top: calc(.15rem + 2px);
 }
-.theme-color {}
-.theme-color-2 {
-  color: #ec6729;
-}
+
 
 // My Reusable
 span,
 svg {
   display: inline-block;
 }
-
+a {
+  color: $primary-purple;
+  &:hover {
+    color: $primary-purple;
+  }
+}
 .fz8 {
   font-size: rem(8px);
 }
@@ -93,4 +96,19 @@ svg {
   line-height: 1.5;
   letter-spacing: 1.25px;
   color: #0a2340;
+}
+.shade-primary {
+  color: $primary-purple;
+}
+.shade-secondary {
+  color: $secondary-purple;
+}
+.shade-tertiary {
+  color: $tertiary-purple;
+}
+.link-underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
 }
