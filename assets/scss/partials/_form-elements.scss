@@ -8,6 +8,11 @@
   color: $white;
   font-size: 16px;
   font-weight: bold;
+  // Flex support for anchor tag
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &:hover {
     color: $white;
   }
@@ -15,12 +20,29 @@
   &.full {
     width: 100%;
   }
+  &.min-width {
+    min-width: 196px;
+  }
 }
 
 .custom-form-group {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
+
+  .inline-link-btn {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    position: absolute;
+    right: 0;
+    top: 18px;
+    padding: 2px;
+    &:hover {
+      text-decoration: none;
+    }
+
+  }
 }
 
 .custom-form-field {
@@ -94,7 +116,6 @@
   }
 }
 
-
 // HTML Markup reference
 /*
 <div class="custom-form-group">
@@ -107,3 +128,113 @@
 <label for="message" class="custom-form-label">Your Message</label>
 </div>
 */
+
+
+// https://codepen.io/KenanYusuf/pen/PZKEKd
+:root {
+  --disabled: #cdcdcd;
+  --green: #5cd285;
+  --light-grey: #ebebeb;
+  --main-color: #333;
+  --red: #f00;
+  --steel: #8c8d94;
+  --grey-border: #bfbfbf;
+}
+
+@mixin checkbox-radio-label-property() {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+  margin-bottom: 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+@mixin checkbox-radio-label-before() {
+  background-color: $white;
+  border: 1px solid var(--grey-border);
+  content: '';
+  display: block;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+}
+
+// Custom checkbox
+.checkbox-field {
+
+  // it will add when we need to bold text after selecting radio button
+  &.bold-title {
+    .checkbox-element {
+      &:checked {
+        + .title {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  // for theme color font just add "theme-color" class also with title label
+  &.theme-title {
+    .checkbox-element {
+      &:checked {
+        + .title {
+          color: $secondary-purple;
+        }
+      }
+    }
+  }
+
+  .checkbox-element {
+    +.title {
+      @include checkbox-radio-label-property();
+
+      &:before {
+        @include checkbox-radio-label-before();
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .checkbox-element {
+    display: none;
+
+    &:disabled,
+    &:checked {
+      +.title {
+        &:after {
+          transform: rotate(45deg);
+          border: solid $white;
+          border-width: 0 2px 2px 0;
+          content: '';
+          display: block;
+          height: 12px;
+          position: absolute;
+          top: 3px;
+          left: 7px;
+          width: 6px;
+        }
+      }
+    }
+
+    &:checked {
+      +.title {
+        &:before {
+          background-color: $secondary-purple;
+          border-color: $secondary-purple;
+        }
+      }
+    }
+
+    &:disabled {
+      +.title {
+        &:before {
+          background-color: var(--disabled);
+          border-color: var(--disabled);
+        }
+      }
+    }
+  }
+}

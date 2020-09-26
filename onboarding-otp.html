@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Shashikant">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0">
-  <title>Onboarding | Insure My Team</title>
+  <title>Onboarding OTP | Insure My Team</title>
 
   <!-- Fonts CSS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" />
@@ -27,18 +27,16 @@
                 </header>
                 <h1 class="main-heading">Get Started</h1>
                 <p class="shade-secondary fz16 mb30">Already have an account <a href="#" class="fw700 link-underline">Sign in</a></p>
+                <h3 class="fw600 fz24 mb20">OTP Verification</h3>
+                <div class="mb40 fz16">
+                  <span class="shade-secondary">OTP Sent to</span>
+                  <span class="ml10">+91 9891887226</span>
+                </div>
                 <form>
                   <div class="custom-form-group mb32">
-                    <input type="email" id="userName" class="custom-form-field" placeholder="Your Name">
-                    <label for="userName" class="custom-form-label">Your Name</label>
-                  </div>
-                  <div class="custom-form-group mb32">
-                    <input type="tel" id="phoneNumber" class="custom-form-field" placeholder="Phone Number">
-                    <label for="phoneNumber" class="custom-form-label">Phone Number</label>
-                  </div>
-                  <div class="custom-form-group mb32">
-                    <input type="email" id="userEmail" class="custom-form-field" placeholder="Email ID">
-                    <label for="userEmail" class="custom-form-label">Email ID</label>
+                    <input type="tel" id="enterOtp" maxlength="4" class="custom-form-field" placeholder="Enter OTP">
+                    <label for="enterOtp" class="custom-form-label">Enter OTP</label>
+                    <button type="button" class="inline-link-btn fz16 fw700 shade-primary">Resend OTP</button>
                   </div>
 
                   <div class="checkbox-field inline-block mb25">
@@ -47,17 +45,15 @@
                       I am looking to buy a fresh insurance policy for my team.
                     </label>
                   </div>
-                  <a href="/onboarding-otp.html" class="btn full mb24">
-                    Send OTP
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto" width="24" height="24"><g transform="translate(-91)" fill="none" fill-rule="evenodd"><path fill="#ffffff" d="M95.906 13h11.883l-5.458 5.59 1.386 1.41 7.811-8-7.811-8-1.376 1.41 5.448 5.59H95.906v2"/></g></svg>
+                  <a href="/get-quotation.html" class="btn full mb24">
+                    Get Quotation
                   </a>
                   <!--
                   Main action will perform on this button
                   instead of upper anchor tag.
 
-                  <button type="submit" class="btn full mb24">
-                    Send OTP
-                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-auto" width="24" height="24"><g transform="translate(-91)" fill="none" fill-rule="evenodd"><path fill="#ffffff" d="M95.906 13h11.883l-5.458 5.59 1.386 1.41 7.811-8-7.811-8-1.376 1.41 5.448 5.59H95.906v2"/></g></svg>
+                  <button type="submit" disabled class="btn full mb24">
+                    Get Quotation
                   </button>
                   -->
                   <p class="fz16 shade-primary mb30">

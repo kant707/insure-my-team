@@ -53,3 +53,59 @@ input[type=number].num::-webkit-outer-spin-button {
   padding-top: 60px;
   padding-bottom: 40px;
 }
+
+// Get quotation
+.main-header {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 32px;
+
+  .user-pic {
+    max-width: 40px;
+  }
+}
+
+.quotation-wrapper {
+  //display: flex;
+  background: #f6f6fb url("/assets/images/grey-bg-img.svg") no-repeat right bottom;
+  border-radius: 20px;
+  padding: 60px;
+  min-height: 620px;
+  max-width: 1335px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.white-card {
+  background: $white;
+  border-radius: 20px;
+  padding: 60px 45px;
+}
+.next-prev-wrapper {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+  a {
+    color: $black-9;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+
+    &:hover {
+      color: $black-9;
+      text-decoration: none;
+    }
+  }
+}
