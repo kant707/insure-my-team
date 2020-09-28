@@ -52,6 +52,19 @@ input[type=number].num::-webkit-outer-spin-button {
 .onboarding-header {
   padding-top: 60px;
   padding-bottom: 40px;
+  @media (max-width: 767px) {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    .brand-logo img {
+      max-width: 24px;
+    }
+  }
+}
+.otp-verify {
+  @media (max-width: 767px) {
+    font-size: 20px;
+    margin-top: 40px;
+  }
 }
 
 // Get quotation
@@ -60,32 +73,68 @@ input[type=number].num::-webkit-outer-spin-button {
   margin: 0 auto;
   padding-top: 24px;
   padding-bottom: 32px;
-
+  @media (max-width: 767px) {
+    .brand-logo img {
+      max-width: 24px;
+    }
+  }
   .user-pic {
     max-width: 40px;
   }
 }
 
+.quotation-col {
+  @media (max-width: 767px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 .quotation-wrapper {
   //display: flex;
   background: #f6f6fb url("/assets/images/grey-bg-img.svg") no-repeat right bottom;
   border-radius: 20px;
   padding: 60px;
-  min-height: 620px;
+  height: 70vh;
+  max-height: 620px;
   max-width: 1335px;
   margin-right: auto;
   margin-left: auto;
-}
 
+  @media (max-width: 767px) {
+    height: auto;
+    max-height: none;
+    padding: 60px 20px;
+  }
+}
+.quotation-steps {
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
 .white-card {
   background: $white;
   border-radius: 20px;
   padding: 60px 45px;
+  @media (max-width: 767px) {
+    padding-top: 22px;
+    padding-bottom: 2px;
+  }
 }
 .white-card-2-wrapper {
   display: flex;
   justify-content: center;
-
+  @media (max-width: 767px) {
+    flex-direction: column;
+    .white-card-2 {
+      min-width: 100%;
+      min-height: 0;
+      margin-right: auto;
+      margin-left: auto;
+      .fz24 {
+        font-size: 16px;
+      }
+    }
+  }
 }
 .white-card-2 {
   max-width: 200px;
@@ -102,7 +151,25 @@ input[type=number].num::-webkit-outer-spin-button {
   justify-content: center;
   margin-right: 15px;
   margin-left: 15px;
+  margin-bottom: 12px;
   cursor: pointer;
+  @media (max-width: 767px) {
+    .card-adjuster {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 100%;
+
+      .fz16 {
+        margin-right: auto;
+      }
+
+      img {
+        max-width: 80px;
+      }
+    }
+  }
+
 
   &.active {
     border: 2px solid $primary-purple;
@@ -125,6 +192,12 @@ input[type=number].num::-webkit-outer-spin-button {
   max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    .next-btn {
+      width: 100%;
+    }
+  }
 }
 
 
@@ -144,6 +217,9 @@ input[type=number].num::-webkit-outer-spin-button {
     font-size: 16px;
     font-weight: bold;
     text-decoration: underline;
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
 
     &:hover {
       color: $black-9;

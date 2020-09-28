@@ -96,6 +96,13 @@ a {
   line-height: 1.5;
   letter-spacing: 1.25px;
   color: #0a2340;
+
+  @media (max-width: 767px) {
+    font-size: rem(24px);
+  }
+}
+.primary-text {
+  color: $primary;
 }
 .shade-primary {
   color: $primary-purple;
