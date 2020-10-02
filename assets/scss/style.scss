@@ -12,6 +12,7 @@ body {
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: .5px;
+  min-height: 100vh;
 }
 
 input[type=number].num::-webkit-inner-spin-button,
@@ -33,7 +34,7 @@ input[type=number].num::-webkit-outer-spin-button {
     background: #000 url('/assets/images/graphic/onboarding-graphic.svg') no-repeat center top/cover;
     position: absolute;
     right: 0;
-    height: 100%;
+    height: 100vh;
     width: 50%;
 
     @media (max-width: 991px) {
@@ -202,37 +203,150 @@ input[type=number].num::-webkit-outer-spin-button {
 
 // Pricing
 .pricing-container {
+  .pricing-section-container {
+    position: relative;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 55px;
+
+    &.inactive {
+      background: $white-grey;
+      border-radius: 20px;
+      border: 1px solid $tertiary-purple;
+      .curvy-shape,
+      .plan-wrapper {
+        display: none;
+      }
+      .angle-arrow {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .head-panel-wrapper {
+    .toggle-wrap {
+      padding-top: 6px;
+    }
+    .angle-arrow {
+      transform: rotate(180deg);
+    }
+  }
   .head-panel {
-    padding: 20px;
-    border: 1px solid $tertiary-purple;
-    border-bottom-color: transparent;
-    border-radius: 20px 20px 0 0;
-    background: $white-grey;
-    width: 370px;
     height: 92px;
+    position: relative;
+    bottom: -2px;
 
-    -webkit-transform: perspective(370px) rotateX(20deg);
-    -o-transform: perspective(370px) rotateX(20deg);
-    -moz-transform: perspective(370px) rotateX(20deg);
-    -webkit-transform-origin: 0% 50%;
-    -moz-transform-origin: 0% 50%;
-    -o-transform-origin: 0% 50%;
-    transform-origin: 0% 50%;
-
-    &:before {
-      content: '';
-      width: 30px;
-      height: 30px;
-
+    .curvy-shape {
+      border: 1px solid $tertiary-purple;
+      border-bottom-color: transparent;
+      border-radius: 20px 20px 0 0;
+      background: $white-grey;
+      width: 370px;
+      height: 92px;
       position: absolute;
-      right: -30px;
-      bottom: -1px;
+      top: 0;
+      left: 0;
+
+      -webkit-transform: perspective(370px) rotateX(20deg);
+      -o-transform: perspective(370px) rotateX(20deg);
+      -moz-transform: perspective(370px) rotateX(20deg);
+      -webkit-transform-origin: 0% 50%;
+      -moz-transform-origin: 0% 50%;
+      -o-transform-origin: 0% 50%;
+      transform-origin: 0% 50%;
+
+      &:before {
+        content: '';
+        width: 30px;
+        height: 30px;
+
+        position: absolute;
+        right: -30px;
+        bottom: -1px;
+        //z-index: 2;
+        border-color: $tertiary-purple;
+        border-style: solid;
+        border-bottom-left-radius: 20px;
+        border-width: 0 0 1px 1px;
+        box-shadow: -20px 0 0 $white-grey;
+      }
+      &:after {
+        content: '';
+        width: 382px;
+        height: 1px;
+        background: $white-grey;
+        position: absolute;
+        bottom: -1px;
+      }
+    }
+    .brand-plan {
+      position: relative;
       z-index: 2;
-      border-color: $tertiary-purple;
-      border-style: solid;
-      border-bottom-left-radius: 20px;
-      border-width: 0 0 1px 1px;
-      box-shadow: -20px 0 0 $white-grey;
+      width: 350px;
+      padding-top: 17px;
+      padding-left: 40px;
+
+      img {
+        max-height: 60px;
+      }
+    }
+  }
+
+  .plan-wrapper {
+    background: $white-grey;
+    border: 1px solid $tertiary-purple;
+    border-radius: 0 20px 20px 20px;
+    padding-top: 32px;
+
+    .pricing-card {
+      width: 329px;
+      min-height: 486px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
+      background: $white;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 32px;
+      transition: all ease-in-out 300ms;
+
+      &.selected,
+      &:hover {
+        background: $primary-purple;
+        color: $white;
+        transform: scale(1.03);
+        .check path {
+          fill: $white;
+        }
+        .shade-secondary {
+          color: inherit;
+        }
+        .btn {
+          background: $white-grey;
+          color: $primary-purple;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.16);
+        }
+      }
+      .media {
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
+        padding: 20px 20px;
+      }
+      .key-feature {
+        padding: 20px;
+        .feature-list {
+          .item {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .btn {
+        background: $white;
+        box-shadow: none;
+        color: $primary-purple;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 }
