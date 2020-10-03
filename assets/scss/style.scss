@@ -42,6 +42,11 @@ input[type=number].num::-webkit-outer-spin-button {
     }
   }
 }
+.common-container {
+  margin: 0 auto;
+  max-width: 1140px;
+  width: 100%;
+}
 
 .main-header {
   padding-top: 24px;
@@ -388,11 +393,114 @@ input[type=number].num::-webkit-outer-spin-button {
 }
 
 // Customize Plan
-.common-container {
-  margin: 0 auto;
-  max-width: 1140px;
-  width: 100%;
+.customization-journey {
+  .journey {
+    display: flex;
+    position: relative;
+    text-align: center;
+    &:after {
+      content: '';
+      height: 4px;
+      background: #edebfa;
+      position: absolute;
+      //width: 100%;
+      //left: 0;
+      width: 83.34%;
+      left: 8.33%;
+      top: 4px;
+    }
+    li {
+      flex-grow: 1;
+      position: relative;
+      z-index: 2;
+      margin-right: 0;
+
+      &:first-child,
+      &:last-child {
+        a.step-complete span:before {
+          transform: translateX(0%);
+        }
+      }
+    }
+    a {
+      position: relative;
+      padding-top: 10px;
+      font-size: 12px;
+      color: $black-9;
+      &:hover {
+        color: $black-9;
+        text-decoration: none;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background: $black-9;
+        margin-bottom: 5px;
+      }
+      &.step-current,
+      &.step-complete {
+        span {
+          position: relative;
+          &:before {
+            content: '';
+            height: 4px;
+            width: calc(100% + 2px);
+            position: absolute;
+            top: -15px;
+            background: $secondary-purple;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      &.step-current {
+        color: $primary-purple;
+        &:after {
+          content: '';
+          position: absolute;
+          height: 16px;
+          width: 16px;
+          background: $white;
+          border: 4px solid $primary-purple;
+          border-radius: 50%;
+          top: 6px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        span {
+          position: relative;
+          &:before {
+            width: 52%;
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+      }
+      &.step-complete {
+        color: $primary;
+        &:after {
+          content: '';
+          position: absolute;
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          background: #f6f6fb url('/assets/images/icons/card-checkmark.svg') no-repeat 0 0;
+          top: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      span {
+        display: block;
+        padding-top: 6px;
+      }
+    }
+  }
 }
+
 
 // Main Footer
 .main-footer {
