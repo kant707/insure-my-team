@@ -512,6 +512,14 @@ input[type=number].num::-webkit-outer-spin-button {
   border-radius: 0 0 12px 12px;
   padding: 20px;
 }
+.plan-detail-wrap {
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
+  .plan-detail-header {
+    padding: 15px 20px;
+  }
+}
 
 
 // Main Footer
