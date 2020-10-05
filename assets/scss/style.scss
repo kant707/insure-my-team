@@ -67,6 +67,9 @@ input[type=number].num::-webkit-outer-spin-button {
   }
 }
 .otp-verify {
+  @media (min-width: 767px) and (max-width: 1440px) {
+    font-size: 1.667vw;
+  }
   @media (max-width: 767px) {
     font-size: 20px;
     margin-top: 40px;
@@ -516,8 +519,28 @@ input[type=number].num::-webkit-outer-spin-button {
   background: $white;
   border-radius: 12px;
   box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
+  max-width: 426px;
+  width: 100%;
+  margin-left: auto;
+
   .plan-detail-header {
     padding: 15px 20px;
+  }
+  .plan-detail-footer {
+    background: $bg-orange;
+    padding: 25px 20px;
+    border-radius: 0 0 12px 12px;
+  }
+  .shaded {
+    box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
+  }
+  .bar {
+    border: 2px solid transparent;
+  }
+  .selected {
+    border: 2px solid $primary-purple;
+    border-radius: 3px;
+    box-shadow: 0 12px 24px 4px rgba(79, 61, 209, 0.12);
   }
 }
 
