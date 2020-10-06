@@ -221,6 +221,9 @@ input[type=number].num::-webkit-outer-spin-button {
 
   @media (max-width: 767px) {
     padding: 60px 20px;
+    &.for-mob {
+      padding: 20px;
+    }
   }
 }
 .pricing-container {
@@ -522,10 +525,36 @@ input[type=number].num::-webkit-outer-spin-button {
   max-width: 426px;
   width: 100%;
   margin-left: auto;
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+    margin-left: initial;
+    max-width: none;
+    .plan-detail-container {
+      display: none;
+    }
+  }
+  &.detail-open {
+    .plan-detail-container {
+      display: block;
+    }
+  }
 
   .plan-detail-header {
+    display: flex;
+    align-items: center;
     padding: 15px 20px;
+    @media (max-width: 767px) {
+      .media {
+        flex-direction: row-reverse;
+        img {
+          margin-left: 0;
+          margin-right: 10px;
+          max-width: 36px;
+        }
+      }
+    }
   }
+
   .plan-detail-footer {
     background: $bg-orange;
     padding: 25px 20px;

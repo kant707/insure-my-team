@@ -33,15 +33,17 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <div class="common-wrapper mb25 d-flex justify-content-center align-items-center">
+          <div class="common-wrapper for-mob mb25 d-flex justify-content-center align-items-center">
             <div class="common-container">
               <div class="row">
                 <div class="col-sm-12">
                   <div class="row">
-                    <div class="col-md-7 order-12 order-md-1">
+                    <div class="col-md-6 col-lg-7 order-12 order-md-1">
                       <div class="x">
-                        <h3 class="fz20 fw700">Customise your “Silver” Plan</h3>
-                        <p class="fz16 shade-secondary mb30">Tailor your insurance policy to your needs</p>
+                        <div class="d-none d-md-block">
+                          <h3 class="fz20 fw700">Customise your “Silver” Plan</h3>
+                          <p class="fz16 shade-secondary mb30">Tailor your insurance policy to your needs</p>
+                        </div>
                         <div class="customization-journey mb40">
                           <ul class="journey list-inline">
                             <li class="list-inline-item">
@@ -83,28 +85,28 @@
                           </div>
                           <div class="form-shaded-1">
                             <div class="row">
-                              <div class="col-md-6">
+                              <div class="col-md-12 col-lg-6">
                                 <div class="custom-form-group mb32">
                                   <input type="tel" id="ageGroup1" class="custom-form-field" placeholder="Between 18-35 years" />
                                   <label for="ageGroup1" class="custom-form-label">Between 18-35 years</label>
                                   <span class="fz12 black-9 pt5">₹1,252/employee</span>
                                 </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-12 col-lg-6">
                                 <div class="custom-form-group mb32">
                                   <input type="tel" id="ageGroup2" class="custom-form-field" placeholder="Between 36-45 years" />
                                   <label for="ageGroup2" class="custom-form-label">Between 36-45 years</label>
                                   <span class="fz12 black-9 pt5">₹1,252/employee</span>
                                 </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-12 col-lg-6">
                                 <div class="custom-form-group mb32">
                                   <input type="tel" id="ageGroup3" class="custom-form-field" placeholder="Between 46-54 years" />
                                   <label for="ageGroup3" class="custom-form-label">Between 46-54 years</label>
                                   <span class="fz12 black-9 pt5">₹1,252/employee</span>
                                 </div>
                               </div>
-                              <div class="col-md-6">
+                              <div class="col-md-12 col-lg-6">
                                 <div class="custom-form-group mb32">
                                   <input type="tel" id="ageGroup4" class="custom-form-field" placeholder="Above 55 Years" />
                                   <label for="ageGroup4" class="custom-form-label">Above 55 Years</label>
@@ -127,97 +129,105 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-5 order-1 order-md-12">
-                      <div class="plan-detail-wrap">
+                    <div class="col-md-6 col-lg-5 order-1 order-md-12">
+                      <div class="plan-detail-wrap detail-open">
                         <header class="plan-detail-header">
                           <div class="media">
                             <div class="media-body">
                               <h5 class="mt-0 mb-1 fz14 shade-primary">Plan Type</h5>
                               <div class="fz20">Silver</div>
                             </div>
-                            <img class="ml-3" src="/assets/images/icons/cross-silver.svg" alt="" />
+                            <img class="ml15" src="/assets/images/icons/cross-silver.svg" alt="" />
                           </div>
+                          <button class="link-btn shade-primary ml-auto p0 d-md-none" type="button">
+                            View Details
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path fill="#4f3dd1" d="M12 6c-3.312 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6zm0 7.8l-2.4-2.4h4.8L12 13.8z" />
+                            </svg>
+                          </button>
                         </header>
-                        <div class="prl15">
-                          <div class="row">
-                            <div class="col-6 bar ptb10 prl20">
-                              <div class="fz12">Sum Insured:</div>
-                              <div class="fz16">₹ 500000</div>
-                            </div>
-                            <div class="col-6 bar ptb10 prl20 selected">
-                              <div class="fz12">Insured Lives</div>
-                              <div class="fz16">50</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="p15">
-                          <div class="shade-primary prl5 fz12 mb8">Premium Summary</div>
-                          <div class="row bar mb24 prl5">
-                            <div class="col-8">
-                              <div class="">Base Summary</div>
-                            </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 500000</div>
+                        <div class="plan-detail-container">
+                          <div class="prl15">
+                            <div class="row">
+                              <div class="col-6 bar ptb10 prl20">
+                                <div class="fz12">Sum Insured:</div>
+                                <div class="fz16">₹ 500000</div>
+                              </div>
+                              <div class="col-6 bar ptb10 prl20 selected">
+                                <div class="fz12">Insured Lives</div>
+                                <div class="fz16">50</div>
+                              </div>
                             </div>
                           </div>
-                          <div class="shade-primary prl5 fz12 mb8">Customizations</div>
-                          <div class="row bar ptb5 prl5">
-                            <div class="col-8">
-                              <div class="">Family Members Premium</div>
+                          <div class="p15">
+                            <div class="shade-primary prl5 fz12 mb8">Premium Summary</div>
+                            <div class="row bar mb24 prl5">
+                              <div class="col-8">
+                                <div class="">Base Summary</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 500000</div>
+                              </div>
                             </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 7000</div>
+                            <div class="shade-primary prl5 fz12 mb8">Customizations</div>
+                            <div class="row bar ptb8 prl5">
+                              <div class="col-8">
+                                <div class="">Family Members Premium</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 7000</div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="row bar ptb5 prl5 selected">
-                            <div class="col-8">
-                              <div class="">Room Rent Premium</div>
+                            <div class="row bar ptb8 prl5 selected">
+                              <div class="col-8">
+                                <div class="">Room Rent Premium</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 0</div>
+                              </div>
                             </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 0</div>
+                            <div class="row bar ptb8 prl5">
+                              <div class="col-8">
+                                <div class="">Waiting Period Waiver Premium</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 0</div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="row bar ptb5 prl5">
-                            <div class="col-8">
-                              <div class="">Waiting Period Waiver Premium</div>
+                            <div class="row bar ptb8 prl5 mb10 shaded">
+                              <div class="col-8">
+                                <div class="">Maternity Benefits Premium</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 0</div>
+                              </div>
                             </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 0</div>
-                            </div>
-                          </div>
-                          <div class="row bar ptb5 prl5 shaded">
-                            <div class="col-8">
-                              <div class="">Maternity Benefits Premium</div>
-                            </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 0</div>
-                            </div>
-                          </div>
 
-                          <div class="row bar ptb5 prl5">
-                            <div class="col-8">
-                              <div class="">Net Premium</div>
+                            <div class="row bar ptb5 prl5">
+                              <div class="col-8">
+                                <div class="">Net Premium</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 0</div>
+                              </div>
                             </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 0</div>
+                            <div class="row bar ptb5 prl5">
+                              <div class="col-8">
+                                <div class="">GST (18%)</div>
+                              </div>
+                              <div class="col-4 text-right">
+                                <div class="black-9">₹ 15000</div>
+                              </div>
                             </div>
                           </div>
-                          <div class="row bar ptb5 prl5">
-                            <div class="col-8">
-                              <div class="">GST (18%)</div>
-                            </div>
-                            <div class="col-4 text-right">
-                              <div class="black-9">₹ 15000</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="plan-detail-footer">
-                          <div class="row">
-                            <div class="col-7">
-                              <div class="">Total Premium Payable</div>
-                            </div>
-                            <div class="col-5 text-right">
-                              <div class="fz20 fw700 shade-primary">₹ 942000</div>
+                          <div class="plan-detail-footer">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="">Total Premium Payable</div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <div class="fz20 fw700 shade-primary">₹ 942000</div>
+                              </div>
                             </div>
                           </div>
                         </div>
