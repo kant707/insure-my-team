@@ -531,7 +531,7 @@ input[type=number].num::-webkit-outer-spin-button {
   max-width: 426px;
   width: 100%;
   margin-left: auto;
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     margin-bottom: 25px;
     margin-left: initial;
     max-width: none;
@@ -549,9 +549,16 @@ input[type=number].num::-webkit-outer-spin-button {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    @media (max-width: 767px) {
+    .media {
+      width: 100%;
+    }
+    img {
+      margin-left: auto;
+    }
+    @media (max-width: 991px) {
       .media {
         flex-direction: row-reverse;
+        width: auto;
         img {
           margin-left: 0;
           margin-right: 10px;
