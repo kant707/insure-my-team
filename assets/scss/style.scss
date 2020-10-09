@@ -132,6 +132,12 @@ input[type=number].num::-webkit-outer-spin-button {
 .white-card-2-wrapper {
   display: flex;
   justify-content: center;
+  @media (max-width: 1199px) {
+    .white-card-2 {
+      min-height: 150px;
+      max-width: none;
+    }
+  }
   @media (max-width: 767px) {
     flex-direction: column;
     .white-card-2 {
