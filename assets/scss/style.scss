@@ -482,6 +482,11 @@ input[type=number].num::-webkit-outer-spin-button {
           left: 50%;
           transform: translateX(-50%);
         }
+        &.first {
+          span:before {
+            width: 0;
+          }
+        }
         span {
           position: relative;
           &:before {
