@@ -528,6 +528,31 @@ input[type=number].num::-webkit-outer-spin-button {
   background: #fafafa;
   border-radius: 0 0 12px 12px;
   padding: 20px;
+
+  .feature-list {
+    &.disabled {
+      .item {
+        color: $black-9;
+      }
+      span {
+        text-decoration: line-through;
+      }
+      svg path{
+        fill: $black-9;
+      }
+    }
+    .item {
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 30px;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 .plan-detail-wrap {
   background: $white;
