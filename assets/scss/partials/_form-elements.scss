@@ -344,4 +344,40 @@
   }
 }
 
+// Custom file upload
+.custom-upload {
+  position: relative;
+
+  input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .faux-upload {
+    background: #fafafa url("/assets/images/icons/file-upload.svg") no-repeat 13px 40%;
+    border: solid 1px $black-9;
+    border-radius: 8px;
+    padding: 5px 10px 5px 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      border-left: 1px solid $black-9;
+      left: 48px;
+    }
+    &.placeholder {
+      top: 8px;
+    }
+  }
+}
+
 
