@@ -358,6 +358,9 @@
     background: #fafafa url("/assets/images/icons/file-upload.svg") no-repeat 13px 40%;
     border: solid 1px $black-9;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding: 5px 10px 5px 55px;
     position: absolute;
     top: 0;
