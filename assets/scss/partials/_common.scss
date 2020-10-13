@@ -172,6 +172,9 @@ a {
 .black-9 {
   color: $black-9;
 }
+.strikethrough {
+  text-decoration: line-through;
+}
 .link-underline {
   text-decoration: underline;
   &:hover {
