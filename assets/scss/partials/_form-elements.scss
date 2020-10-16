@@ -281,6 +281,9 @@
     &:after {
       content: '';
     }
+    &.no-shadow {
+      box-shadow: none;
+    }
     .heading {
       font-weight: bold;
     }

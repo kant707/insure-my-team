@@ -528,7 +528,12 @@ input[type=number].num::-webkit-outer-spin-button {
   background: #fafafa;
   border-radius: 0 0 12px 12px;
   padding: 20px;
-
+  &.white-bg {
+    background: $white;
+  }
+  &.pale-bg {
+    background: #fff5e2;
+  }
   .feature-list {
     &.disabled {
       .item {
@@ -554,6 +559,7 @@ input[type=number].num::-webkit-outer-spin-button {
     }
   }
 }
+.plan-detail-wrap-transparent,
 .plan-detail-wrap {
   background: $white;
   border-radius: 12px;
@@ -613,6 +619,14 @@ input[type=number].num::-webkit-outer-spin-button {
     border: 2px solid $primary-purple;
     border-radius: 3px;
     box-shadow: 0 12px 24px 4px rgba(79, 61, 209, 0.12);
+  }
+}
+.plan-detail-wrap-transparent {
+  background: transparent;
+  box-shadow: none;
+  @media (max-width: 991px) {
+    padding-top: 0;
+    margin-top: -5px;
   }
 }
 
