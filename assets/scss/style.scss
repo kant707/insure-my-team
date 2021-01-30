@@ -265,7 +265,10 @@ input[type=number].num::-webkit-outer-spin-button {
     height: 92px;
     position: relative;
     bottom: -2px;
-
+    left: 0;
+    @media (min-width: 1351px) {
+      left: 16px;
+    }
     .curvy-shape {
       border: 1px solid $tertiary-purple;
       border-bottom-color: transparent;
@@ -483,6 +486,9 @@ input[type=number].num::-webkit-outer-spin-button {
       padding-top: 10px;
       font-size: 12px;
       color: $black-9;
+      @media (max-width: 400px) {
+        font-size: 10px;
+      }
       &:hover {
         color: $black-9;
         text-decoration: none;
@@ -652,12 +658,23 @@ input[type=number].num::-webkit-outer-spin-button {
     background: $bg-orange;
     padding: 25px 20px;
     border-radius: 0 0 12px 12px;
+    @media (max-width: 400px) {
+      .text-right {
+        padding-left: 0;
+      }
+    }
   }
   .shaded {
     box-shadow: 0 8px 18px 2px rgba(79, 61, 209, 0.05);
   }
   .bar {
     border: 2px solid transparent;
+
+    @media (max-width: 400px) {
+      .text-right {
+        padding-left: 0;
+      }
+    }
   }
   .selected {
     border: 2px solid $primary-purple;
@@ -699,4 +716,17 @@ input[type=number].num::-webkit-outer-spin-button {
       text-decoration: none;
     }
   }
+}
+
+
+// Page wise
+// customize-plan
+.customize-plan {
+  @media (max-width: 400px) {
+    .gutter-adj {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
 }
